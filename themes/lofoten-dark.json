@@ -755,6 +755,10 @@
       "settings": { "foreground": "#6387A8" }
     },
     {
+      "scope": ["support.type.nim"],
+      "settings": { "foreground": "#C6C58F" }
+    },
+    {
       "scope": ["storage.type.concrete.nim", "storage.type.generic.nim"],
       "settings": { "foreground": "#B5A6C8" }
     },
