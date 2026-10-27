@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+  <defs>
+    <style>
+      .editor        { fill: #344852; }
+      .gutter        { fill: #3A505B; }
+      .gutter-border { stroke: #445D6A; stroke-width: 1; }
+      .line-current  { fill: #3C5360; }
+      .selection    { fill: #4A6570; }
+      .keyword      { fill: #D58D91; }
+      .name         { fill: #C8D5DA; }
+      .type         { fill: #B5A6C8; }
+      .string       { fill: #C99BB4; }
+      .number       { fill: #E4B2B4; }
+      .punct        { fill: #83B6BC; }
+      .comment      { fill: #7A9595; }
+      .define       { fill: #E6BE9F; }
+      .function     { fill: #5BBDC9; }
+      .constant     { fill: #D6A078; }
+      .bar          { rx: 5; }
+    </style>
+  </defs>
+
+  <rect class="editor" x="0" y="0" width="1000" height="400"/>
+  <rect class="gutter" x="0" y="0" width="68" height="400"/>
+  <line class="gutter-border" x1="68" y1="0" x2="68" y2="400"/>
+
+  <rect class="line-current" x="68" y="54" width="932" height="34"/>
+  <rect class="selection" x="92" y="190" width="528" height="136" rx="4"/>
+
+  <rect class="bar keyword"  x="92"  y="32" width="72" height="10"/>
+  <rect class="bar define" x="174" y="32" width="132" height="10"/>
+  <rect class="bar punct"    x="316" y="32" width="38" height="10"/>
+  <rect class="bar type"     x="364" y="32" width="86" height="10"/>
+  <rect class="bar punct"    x="460" y="32" width="12" height="10"/>
+
+  <rect class="bar keyword" x="132"  y="66" width="58" height="10"/>
+  <rect class="bar name"    x="200" y="66" width="112" height="10"/>
+  <rect class="bar punct"   x="322" y="66" width="22" height="10"/>
+  <rect class="bar string"  x="354" y="66" width="178" height="10"/>
+  <rect class="bar punct"   x="540" y="66" width="12" height="10"/>
+
+  <rect class="bar keyword" x="132" y="100" width="66" height="10"/>
+  <rect class="bar function" x="208" y="100" width="146" height="10"/>
+  <rect class="bar punct"   x="364" y="100" width="14" height="10"/>
+  <rect class="bar number"  x="388" y="100" width="48" height="10"/>
+  <rect class="bar punct"   x="446" y="100" width="12" height="10"/>
+
+  <rect class="bar keyword"  x="132" y="134" width="76" height="10"/>
+  <rect class="bar type"     x="218" y="134" width="108" height="10"/>
+  <rect class="bar punct"    x="336" y="134" width="12" height="10"/>
+  <rect class="bar constant" x="360" y="134" width="94" height="10"/>
+  <rect class="bar punct"    x="464" y="134" width="12" height="10"/>
+
+  <rect class="bar keyword" x="172" y="202" width="52" height="10"/>
+  <rect class="bar name"    x="234" y="202" width="128" height="10"/>
+  <rect class="bar punct"   x="372" y="202" width="12" height="10"/>
+  <rect class="bar string"  x="396" y="202" width="152" height="10"/>
+
+  <rect class="bar keyword"  x="172" y="236" width="66" height="10"/>
+  <rect class="bar function" x="248" y="236" width="148" height="10"/>
+  <rect class="bar punct"    x="406" y="236" width="18" height="10"/>
+  <rect class="bar type"     x="432" y="236" width="72" height="10"/>
+  <rect class="bar punct"    x="514" y="236" width="18" height="10"/>
+
+  <rect class="bar comment" x="172" y="270" width="54" height="10"/>
+  <rect class="bar comment" x="236" y="270" width="186" height="10"/>
+  <rect class="bar comment" x="432" y="270" width="88" height="10"/>
+
+  <rect class="bar punct"   x="172" y="304" width="18" height="10"/>
+  <rect class="bar keyword" x="202" y="304" width="60" height="10"/>
+  <rect class="bar punct"   x="274" y="304" width="18" height="10"/>
+
+  <rect class="bar keyword" x="92"  y="338" width="72" height="10"/>
+  <rect class="bar name"    x="174" y="338" width="124" height="10"/>
+  <rect class="bar punct"   x="308" y="338" width="18" height="10"/>
+  <rect class="bar string"  x="336" y="338" width="202" height="10"/>
+  <rect class="bar punct"   x="548" y="338" width="12" height="10"/>
+  <rect class="bar type"    x="572" y="338" width="92" height="10"/>
+
+  <rect class="bar function" x="132" y="372" width="116" height="10"/>
+  <rect class="bar punct"    x="258" y="372" width="18" height="10"/>
+  <rect class="bar type"     x="286" y="372" width="72" height="10"/>
+  <rect class="bar punct"    x="368" y="372" width="18" height="10"/>
+  <rect class="bar number"   x="396" y="372" width="42" height="10"/>
+</svg>
