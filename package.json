@@ -1,0 +1,41 @@
+{
+  "name": "lofoten-theme",
+  "displayName": "Lofoten Theme",
+  "description": "VS Code theme",
+  "version": "1.0.0",
+  "publisher": "Prisvrax",
+  "author": {
+    "name": "Prisvrax"
+  },
+  "engines": {
+    "vscode": "^1.131.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "color-theme",
+    "lofoten"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/prisvrax/lofoten-vscode-theme/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prisvrax/lofoten-vscode-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prisvrax/lofoten-vscode-theme/issues"
+  },
+  "icon": "icon.png",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lofoten Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lofoten-dark.json"
+      }
+    ]
+  }
+}
