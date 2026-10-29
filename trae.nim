@@ -1,7 +1,7 @@
 ## ```
 ## nim r ./trae.nim
 ## ```
-import std/[json, jsonutils, options, sequtils, strformat, syncio, tables, times, os]
+import std/[json, jsonutils, options, os, sequtils, strformat, strutils, syncio, tables, times]
 
 type ExtensionInfo = object
   identifier: tuple[id: string]
@@ -42,7 +42,25 @@ let
 let
   currSrcPath: string = currentSourcePath()
   currSrcDir: string = parentDir(currSrcPath)
-copyDir(currSrcDir, extensionFolderPath)
+
+var sameExtensionPaths = newSeq[tuple[pcKind: PathComponent, path: string]]()
+for extensionItemKind, extensionItemPath in walkDir(editorExtensionPos):
+  if lastPathPart(extensionItemPath).startsWith(extensionName):
+    sameExtensionPaths.add((pcKind: extensionItemKind, path: extensionItemPath))
+
+var sameExtensionLinks = newSeq[string]()
+for (samePcKind, samePath) in sameExtensionPaths:
+  case samePcKind:
+  of PathComponent.pcDir:
+    quit(fmt("{samePath} is an existing folder."))
+  of PathComponent.pcFile:
+    quit(fmt("{samePath} is an existing file."))
+  of PathComponent.pcLinkToFile, PathComponent.pcLinkToDir:
+    sameExtensionLinks.add(samePath)
+
+for sameExtensionLink in sameExtensionLinks:
+  removeFile(sameExtensionLink)
+createSymlink(currSrcDir, extensionFolderPath)
 
 let
   extensionListFile: string = fmt("{editorExtensionPos}{editorExtensionFileName}")
